@@ -50,10 +50,15 @@ def contact(request):
         from_email = settings.EMAIL_HOST_USER
         to_email = [form_email,'shailesh.kumarcs@gmail.com']
         context_message = "%s: %s via %s"%(form_full_name,form_message, form_email)
+        some_html_message = """
+        <h1>HELLO HI</h1>
+        """
         send_mail(subject,
                   context_message,
                   from_email,
-                  to_email, fail_silently=False)
+                  to_email,
+                  html_message=some_html_message,
+                  fail_silently=False)
     context = {
         "form":form
     }
