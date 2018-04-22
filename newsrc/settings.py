@@ -27,6 +27,19 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'shailesh.pacdevelopers@gmail.com'
+EMAIL_HOST_PASSWORD = 'pacindia@2018'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+'''
+If using gmail, you will need to 
+unlock Captcha to enable Django
+to send for you
+
+'''
+
 
 # Application definition
 
