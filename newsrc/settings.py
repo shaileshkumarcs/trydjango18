@@ -44,12 +44,17 @@ to send for you
 # Application definition
 
 INSTALLED_APPS = (
+    # django app
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # THIRD PARTY APP
+    'crispy_forms',
+    
+    # My APPS
     'newsletters',
 )
 
@@ -131,4 +136,6 @@ STATICFILES_DIRS = (
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT =os.path.join(BASE_DIR, "static_in_pro","media_root")
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
