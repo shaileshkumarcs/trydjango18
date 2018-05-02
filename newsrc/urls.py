@@ -7,10 +7,12 @@ urlpatterns = [
     # Examples:
      url(r'^$', 'newsletters.views.home', name='home'),
     url(r'^contact/$', 'newsletters.views.contact', name='contact'),
+    url(r'^about/$', 'newsrc.views.about', name='about'),
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    url(r'^accounts/', include('registration.backends.default.urls')),
+]
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
