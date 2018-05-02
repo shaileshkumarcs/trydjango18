@@ -31,7 +31,7 @@ def home(request):
             "title": title,
         }
 
-    return render(request, "home.html", context)
+    return render(request, "base.html", context)
 
 
 def contact(request):
