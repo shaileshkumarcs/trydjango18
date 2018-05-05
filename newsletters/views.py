@@ -35,10 +35,14 @@ def home(request):
 
     if request.user.is_authenticated() and request.user.is_staff:
         #print(SignUp.objects.all())
-        if instance in SignUp.objects.all()
-            print(instance)
+        # i = 1
+        # for instance in SignUp.objects.all():
+        #     print(i)
+        #     print(instance.full_name)
+        #     i += 1
+        queryset = SignUp.objects.all().order_by('-timestamp').filter(full_name__icontains="Dangi")
         context = {
-            "queryset":[123,456]
+            "queryset":queryset
         }
 
     return render(request, "home.html", context)
